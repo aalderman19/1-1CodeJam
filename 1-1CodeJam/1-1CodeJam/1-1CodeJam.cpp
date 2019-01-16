@@ -4,10 +4,29 @@
 #include "pch.h"
 #include <iostream>
 
+string AskQuestion() 
+{
+	string str;
+	cout << "Question?" << endl;
+	getline(cin, str);
+
+	if (str.length() >= 1)
+	{
+		cout << "No, You're wrong!" << endl;
+		AskQuestion();
+	}
+	return str;
+}
+
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	bool gameOver = false;
+	if (!gameOver)
+	{
+		string answer = AskQuestion();
+	}
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
