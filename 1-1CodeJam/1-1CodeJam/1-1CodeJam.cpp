@@ -2,7 +2,6 @@
 //
 
 #include "pch.h"
-#include <iostream>
 
 string AskQuestion() 
 {
@@ -20,9 +19,12 @@ string AskQuestion()
 
 int main()
 {
+	Location* location = new Location("Modea", "The place you work...");
+
 	bool gameOver = false;
 	if (!gameOver)
 	{
+		location->IntroduceSetting();
 		string answer = AskQuestion();
 		cout << "Final answer: " << answer << endl;
 	}

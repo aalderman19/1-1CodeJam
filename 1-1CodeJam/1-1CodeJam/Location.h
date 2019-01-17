@@ -4,8 +4,10 @@
 class Location
 {
 public:
-	Location();
+	Location(string name, string description);
+	string Name;
 	string Description;
+	void IntroduceSetting();
 	~Location();
 };
 
