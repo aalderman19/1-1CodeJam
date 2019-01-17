@@ -15,4 +15,5 @@ void Location::IntroduceSetting()
 
 Location::~Location()
 {
+	cout << "Location disposed" << endl;
 }

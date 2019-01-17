@@ -26,6 +26,7 @@ int main()
 	{
 		location->IntroduceSetting();
 		string answer = AskQuestion();
+		delete location; // dispose of object / deallocate memory
 		cout << "Final answer: " << answer << endl;
 	}
 }
