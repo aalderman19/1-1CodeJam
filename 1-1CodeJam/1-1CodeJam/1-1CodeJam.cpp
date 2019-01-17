@@ -10,10 +10,10 @@ string AskQuestion()
 	cout << "Question?" << endl;
 	getline(cin, str);
 
-	if (str.length() >= 1)
+	if (str != "exit")
 	{
 		cout << "No, You're wrong!" << endl;
-		AskQuestion();
+		str = AskQuestion();
 	}
 	return str;
 }
@@ -24,6 +24,7 @@ int main()
 	if (!gameOver)
 	{
 		string answer = AskQuestion();
+		cout << "Final answer: " << answer << endl;
 	}
 }
 
